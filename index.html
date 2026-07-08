@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイ・ポータルサイト</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero-header">
+        <img src="https://picsum.photos/1200/400" alt="ランダムな景色" class="header-img">
+        <div class="header-overlay">
+            <h1>マイ・ポータルサイト</h1>
+            <div id="clock">00:00:00</div>
+        </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="search-area">
+            <form action="https://www.google.com/search" method="get" target="_blank" class="search-form">
+                <input type="text" name="q" class="search-input" placeholder="キーワードを入力してGoogle検索..." required>
+                <button type="submit" class="search-btn">検索</button>
+            </form>
+        </div>
+        
+        <section class="category-section">
+            <h3 class="category-title">検索・ポータルサイト</h3>
+            <div class="button-grid">
+                <a href="https://www.google.com" target="_blank" class="site-btn google-btn">Google</a>
+                <a href="https://www.yahoo.co.jp" target="_blank" class="site-btn yahoo-btn">Yahoo! JAPAN</a>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h3 class="category-title">動画・音楽配信</h3>
+            <div class="button-grid">
+                <a href="https://www.youtube.com" target="_blank" class="site-btn youtube-btn">YouTube</a>
+                <a href="https://music.youtube.com" target="_blank" class="site-btn youtubemusic-btn">YouTube Music</a>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h3 class="category-title">JR鉄道会社</h3>
+            <div class="button-grid">
+                <a href="https://www.jrhokkaido.co.jp/" target="_blank" class="site-btn jrhokkaido-btn">JR北海道</a>
+                <a href="https://www.jreast.co.jp/" target="_blank" class="site-btn jreast-btn">JR東日本</a>
+                <a href="https://jr-central.co.jp/" target="_blank" class="site-btn jrcentral-btn">JR東海</a>
+                <a href="https://www.westjr.co.jp/" target="_blank" class="site-btn jrwest-btn">JR西日本</a>
+                <a href="https://www.jr-shikoku.co.jp/" target="_blank" class="site-btn jrshikoku-btn">JR四国</a>
+                <a href="https://www.jrkyushu.co.jp/" target="_blank" class="site-btn jrkyushu-btn">JR九州</a>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h3 class="category-title">乗り換え・交通案内</h3>
+            <div class="button-grid">
+                <a href="https://transit.yahoo.co.jp/" target="_blank" class="site-btn y-transit-btn">ヤフー乗換案内</a>
+                <a href="https://www.jorudan.co.jp/" target="_blank" class="site-btn jorudan-btn">ジョルダン</a>
+                <a href="https://www.navitime.co.jp/" target="_blank" class="site-btn navitime-btn">NAVITIME</a>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h3 class="category-title">AIアシスタント</h3>
+            <div class="button-grid">
+                <a href="https://gemini.google.com/" target="_blank" class="site-btn gemini-btn">Gemini</a>
+                <a href="https://chatgpt.com/" target="_blank" class="site-btn chatgpt-btn">ChatGPT</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Portal Site</p>
+    </footer>
+
+</body>
+
+<script>
+        function updateClock() {
+            const now = new Date(); // 現在の時間を取得
+            
+            // 時・分・秒を取り出して、1桁の時は頭に「0」をつける設定
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            // 画面の「00:00:00」を今の時間に書き換える
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        // 1000ミリ秒（1秒）ごとに上の「updateClock」を実行する
+        setInterval(updateClock, 1000);
+        
+        // ページを開いた瞬間にも1回実行する（1秒の遅れをなくすため）
+        updateClock();
+    </script>
+    </body>
+</html>
