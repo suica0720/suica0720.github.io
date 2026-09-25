@@ -4,18 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ページが見つかりません - マイ・ポータルサイト</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .error-box {
+            background-color: #ffffff;
+            padding: 50px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            max-width: 480px;
+            width: 100%;
+        }
+        .error-code {
+            font-size: 5.5rem;
+            color: #4285F4;
+            line-height: 1;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .home-btn {
+            display: inline-block;
+            background-color: #4285F4;
+            color: #ffffff;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        .home-btn:hover {
+            background-color: #3367d6;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
 
-    <main class="container error-container">
-        <div class="error-box">
-            <h1 class="error-code">404</h1>
-            <h2>ページが見つかりません</h2>
-            <p>お探しのページは削除されたか、URLが間違っている可能性があります。</p>
-            <a href="./" class="site-btn google-btn home-btn">ポータルサイトへ戻る</a>
-        </div>
-    </main>
+    <div class="error-box">
+        <h1 class="error-code">404</h1>
+        <h2>ページが見つかりません</h2>
+        <p>お探しのページは削除されたか、URLが間違っている可能性があります。</p>
+        <a href="https://suica0720.github.io/-/" class="home-btn">ポータルサイトへ戻る</a>
+    </div>
 
 </body>
 </html>

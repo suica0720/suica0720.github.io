@@ -195,49 +195,4 @@ footer {
     padding: 6px 20px;
     border-radius: 20px;
     backdrop-filter: blur(4px); /* 背景の景色を少しぼかす最新のエフェクト */
-
-/* ──────────────────────────────────
-   404エラーページのデザイン（追加分）
-────────────────────────────────── */
-.error-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 70vh;
-}
-
-.error-box {
-    background-color: #fff;
-    padding: 50px 30px;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    max-width: 500px;
-    width: 100%;
-}
-
-.error-code {
-    font-size: 5rem;
-    color: #4285F4;
-    line-height: 1;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.error-box h2 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    color: #222;
-}
-
-.error-box p {
-    color: #666;
-    font-size: 0.95rem;
-    margin-bottom: 30px;
-}
-
-.home-btn {
-    display: inline-block;
-    min-width: 200px;
-}    
 }
